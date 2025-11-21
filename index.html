@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A2 Journey</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f7e9e9;
+    color: #333;
+    text-align: center;
+}
+
+#container {
+    padding: 20px;
+}
+
+.page {
+    display: none;
+    animation: fade 0.6s ease-in-out;
+}
+
+input {
+    padding: 10px;
+    width: 70%;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    background: #ff7f99;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff5c85;
+}
+
+.error {
+    color: red;
+    margin-top: 5px;
+}
+
+.msg {
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 20px;
+    background: #ffe6ee;
+    border-radius: 15px;
+}
+
+.finalMsg {
+    font-size: 18px;
+    padding: 20px;
+    background: #fff0f4;
+    border-radius: 15px;
+    line-height: 1.6;
+}
+
+.photo {
+    width: 70%;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+</style>
+</head>
+<body>
+
+<div id="container">
+
+    <!-- PASSWORD PAGE -->
+    <div class="page" id="passwordPage">
+        <h2>Enter Password</h2>
+        <input id="passwordInput" type="password" placeholder="Password">
+        <button onclick="checkPassword()">Enter</button>
+        <p id="wrongPass" class="error"></p>
+    </div>
+
+    <!-- WELCOME PAGE -->
+    <div class="page" id="welcomePage" style="display:none;">
+        <h1>Welcome, My Love</h1>
+        <p>Are you ready to walk through our A2 Journey?</p>
+        <button onclick="goToQuestion(1)">Next</button>
+    </div>
+
+    <!-- QUESTION 1 -->
+    <div class="page" id="q1" style="display:none;">
+        <h2>Question 1</h2>
+        <p>What was your 20th message on the 1000th day of our relationship?</p>
+        <input id="a1" type="text" placeholder="Your answer">
+        <button onclick="checkAnswer(1)">Submit</button>
+        <p id="error1" class="error"></p>
+    </div>
+
+    <!-- PAGE 1 MESSAGE -->
+    <div class="page" id="p1" style="display:none;">
+        <p class="msg">Only you would remember that. And that’s exactly why you’re so special to me.</p>
+        <button onclick="goToQuestion(2)">Next</button>
+    </div>
+
+    <!-- QUESTION 2 -->
+    <div class="page" id="q2" style="display:none;">
+        <h2>Question 2</h2>
+        <p>What is the date on which we went for our first movie?</p>
+        <input id="a2" type="text" placeholder="Your answer">
+        <button onclick="checkAnswer(2)">Submit</button>
+        <p id="error2" class="error"></p>
+    </div>
+
+    <!-- PAGE 2 MESSAGE -->
+    <div class="page" id="p2" style="display:none;">
+        <p class="msg">You remembered the date… and honestly, that day is still one of my happiest memories with you.</p>
+        <button onclick="goToQuestion(3)">Next</button>
+    </div>
+
+    <!-- QUESTION 3 -->
+    <div class="page" id="q3" style="display:none;">
+        <h2>Question 3</h2>
+        <p>What does the 2 mean in a2-journey?</p>
+        <input id="a3" type="text" placeholder="Your answer">
+        <button onclick="checkAnswer(3)">Submit</button>
+        <p id="error3" class="error"></p>
+    </div>
+
+    <!-- PAGE 3 MESSAGE -->
+    <div class="page" id="p3" style="display:none;">
+        <p class="msg">You got it. It has always been you and me… and it always will be.</p>
+        <button onclick="goToQuestion(4)">Next</button>
+    </div>
+
+    <!-- QUESTION 4 -->
+    <div class="page" id="q4" style="display:none;">
+        <h2>Question 4</h2>
+        <p>Which song reminds us of our beginning?</p>
+        <input id="a4" type="text" placeholder="Your answer">
+        <button onclick="checkAnswer(4)">Submit</button>
+        <p id="error4" class="error"></p>
+    </div>
+
+    <!-- PAGE 4 MESSAGE -->
+    <div class="page" id="p4" style="display:none;">
+        <p class="msg">Tum Se Hi was our beginning… and somehow, it still feels like our forever vibe. And the way you remember the little things… that’s why we work.</p>
+        <button onclick="goToQuestion(5)">Next</button>
+    </div>
+
+    <!-- QUESTION 5 -->
+    <div class="page" id="q5" style="display:none;">
+        <h2>Question 5</h2>
+        <p>How long do you think our relationship will last?</p>
+        <input id="a5" type="text" placeholder="Your answer">
+        <button onclick="checkAnswer(5)">Submit</button>
+        <p id="error5" class="error"></p>
+    </div>
+
+    <!-- FINAL PAGE (PAGE 5) -->
+    <div class="page" id="finalPage" style="display:none;">
+        <h1>Our Journey</h1>
+        <p class="finalMsg">
+            (Your big final message will go here — we will write it at the end together.)
+        </p>
+
+        <img src="yourphoto.jpg" class="photo">
+
+        <audio id="music" src="love.mp3" autoplay loop></audio>
+    </div>
+
+</div>
+
+<script>
+/* JS WILL BE ADDED IN PART 2 */
+</script>
+
+</body>
+</html>
