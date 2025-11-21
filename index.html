@@ -170,7 +170,8 @@ button:hover {
 
     <!-- FINAL PAGE (PAGE 5) -->
     <div class="page" id="finalPage" style="display:none;">
-        <h1>Our Journey</h1>
+        <img src="yourphoto.jpg" class="photo">
+        <h1>From Me To You</h1>
         <p class="finalMsg">
             When I look back at our journey, I realize how beautifully imperfect we are. We are soft sometimes, stubborn most of the time, and always fighting here and there, mostly because of my habits. But somehow, even with all the ups and downs, we always find our way back to each other. And that is what makes us real.
 
@@ -183,9 +184,17 @@ Through every moment, good, bad, funny, emotional, there has always been one con
 Thank you for loving me even when I make it difficult. Thank you for being patient, for staying, for coming back every time, and for making this journey feel warm even in the hardest moments. I love you more than I show, more than I say, and more than you think. This is our journey, and I want it to last for a lifetime.
         </p>
 
-        <img src="yourphoto.jpg" class="photo">
+        
 
-        <audio id="music" src="love.mp3" autoplay loop></audio>
+        <audio id="music" src="love.mp3" autoplay loop muted></audio>
+<script>
+setTimeout(() => {
+    let audio = document.getElementById("music");
+    audio.muted = false;
+    audio.play();
+}, 500);
+</script>
+
     </div>
 
 </div>
