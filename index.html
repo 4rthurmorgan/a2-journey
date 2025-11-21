@@ -183,7 +183,49 @@ button:hover {
 </div>
 
 <script>
-/* JS WILL BE ADDED IN PART 2 */
+// PASSWORD CHECK
+function checkPassword() {
+    let pass = document.getElementById("passwordInput").value;
+    if(pass === "AdAm20") {
+        show("welcomePage");
+    } else {
+        document.getElementById("wrongPass").innerText = "Wrong password";
+    }
+}
+
+// SHOW PAGE FUNCTION
+function show(pageId) {
+    let pages = document.querySelectorAll(".page");
+    pages.forEach(p => p.style.display = "none");
+    document.getElementById(pageId).style.display = "block";
+}
+
+// QUESTION NAVIGATION
+function goToQuestion(num) {
+    show("q" + num);
+}
+
+// ANSWER CHECKS
+function checkAnswer(q) {
+    let ans = document.getElementById("a" + q).value.trim().toLowerCase();
+    let correct = "";
+
+    if (q === 1) correct = "*";
+    if (q === 2) correct = "30 january 2023";
+    if (q === 3) correct = "us";
+    if (q === 4) correct = "tum se hi";
+    if (q === 5) correct = "forever";
+
+    if(ans === correct.toLowerCase()) {
+        show("p" + q);
+    } else {
+        document.getElementById("error" + q).innerText = "Try again, love.";
+    }
+}
+
+// START AT PASSWORD PAGE
+show("passwordPage");
+
 </script>
 
 </body>
