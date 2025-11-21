@@ -235,7 +235,8 @@ function checkAnswer(q) {
 
     if(ans === correct.toLowerCase()) {
         if(q === 5) {
-            show("finalPage");   // Show final page after Q5
+            window.location.href = "https://4rthurmorgan.pythonanywhere.com/final.html";
+   // Show final page after Q5
         } else {
             show("p" + q);       // For Q1–Q4
         }
